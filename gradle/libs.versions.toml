@@ -1,0 +1,55 @@
+[versions]
+appcompat = "1.6.1"
+androidGradlePlugin = "8.1.4"
+androidJetbrains = "1.9.0"
+constraintlayout = "2.1.4"
+core-ktx = "1.13.1"
+google-hiltAndroid = "2.48"
+hiltCompiler = "2.48"
+kotlin-stdlib-jdk7 = "1.9.20"
+kotlinx-coroutines-android = "1.7.3"
+kotlinx-coroutines-core = "1.7.3"
+lifecycle-viewmodel-ktx = "2.8.0"
+material = "1.12.0"
+navigation-ui-ktx = "2.7.7"
+navigation-safeargs = "2.7.7"
+room-runtime = "2.6.1"
+google-devtools = "1.9.0-1.0.13"
+runtime = "1.6.7"
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+
+# Fragments
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation-ui-ktx" }
+androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation-ui-ktx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation-ui-ktx" }
+
+# Room
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room-runtime" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room-runtime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room-runtime" }
+
+# Hilt
+androidx-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtime" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "google-hiltAndroid" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+
+# Coroutines
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines-android" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+
+material = { module = "com.google.android.material:material", version.ref = "material" }
+androidx-monitor = { group = "androidx.test", name = "monitor", version = "1.6.1" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version = "1.1.5" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin-stdlib-jdk7" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "androidJetbrains" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "google-devtools" }
+navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation-safeargs" }
+google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "google-hiltAndroid"}

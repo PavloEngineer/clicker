@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_splash"
+    android:gravity="center">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/size_icon"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:max="100"
+        android:progress="0"
+        tools:ignore="Suspicious0dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/size_icon"
+        android:layout_height="@dimen/size_icon"
+        android:src="@drawable/ic_coin_dollar"
+        android:layout_gravity="center_horizontal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textNameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_app_name"
+        android:textColor="@color/profile_title"
+        android:fontFamily="@font/opensans_semibold"
+        android:textSize="@dimen/size_title_splash"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/normal_margin"/>
+</LinearLayout>
