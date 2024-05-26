@@ -18,4 +18,7 @@ interface UserDao {
 
     @Query("SELECT * FROM user WHERE email = :email AND password = :password")
     fun getUser(email: String, password: String): UserEntity
+
+    @Query("SELECT * FROM user WHERE userId = :userId")
+    fun getUserById(userId: Int): UserEntity
 }

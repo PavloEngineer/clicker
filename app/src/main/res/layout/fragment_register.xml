@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/profile_blue"
@@ -25,6 +24,7 @@
             android:layout_height="wrap_content"
             style="@style/LabelLightStyle"
             android:text="@string/label_email"
+            android:layout_marginStart="@dimen/normal_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/labelHeader" />
 
@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             style="@style/LabelLightStyle"
             android:text="@string/label_password"
+            android:layout_marginStart="@dimen/normal_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/editEmail" />
 
@@ -69,6 +70,7 @@
             android:layout_height="wrap_content"
             style="@style/LabelLightStyle"
             android:text="@string/label_again_password"
+            android:layout_marginStart="@dimen/normal_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/editPassword" />
 
@@ -91,6 +93,7 @@
             android:layout_height="wrap_content"
             style="@style/LabelLightStyle"
             android:text="@string/label_name"
+            android:layout_marginStart="@dimen/normal_margin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/editAgainPassword" />
 

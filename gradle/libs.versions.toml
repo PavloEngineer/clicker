@@ -16,6 +16,7 @@ navigation-safeargs = "2.7.7"
 room-runtime = "2.6.1"
 google-devtools = "1.9.0-1.0.13"
 runtime = "1.6.7"
+places = "3.4.0"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -46,6 +47,7 @@ androidx-monitor = { group = "androidx.test", name = "monitor", version = "1.6.1
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version = "1.1.5" }
 kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin-stdlib-jdk7" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

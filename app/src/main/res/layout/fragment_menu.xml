@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/profile_blue">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:layout_marginTop="@dimen/margin_top_title"
+        android:text="@string/label_menu"
+        android:textSize="@dimen/size_title_text"
+        android:textColor="@color/profile_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonPlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainButtonStyle"
+        android:text="@string/label_play"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/textHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonShop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainButtonStyle"
+        android:text="@string/label_shop"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/buttonPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonExit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainButtonStyle"
+        android:text="@string/label_exit"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@id/buttonShop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelChooseSkin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelLightStyle"
+        android:text="@string/label_choose_skin"
+        app:layout_constraintStart_toStartOf="@id/buttonExit"
+        app:layout_constraintTop_toBottomOf="@id/buttonExit" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/editTypeSkin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:background="@color/text_job"
+        android:fontFamily="@font/opensans_semibold"
+        android:paddingStart="@dimen/small_padding"
+        android:paddingEnd="@dimen/small_padding"
+        android:textColor="@color/item_name_color"
+        android:textSize="@dimen/size_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelChooseSkin"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelChooseBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LabelLightStyle"
+        android:text="@string/label_choose_background"
+        app:layout_constraintStart_toStartOf="@id/labelChooseSkin"
+        app:layout_constraintTop_toBottomOf="@id/editTypeSkin" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/editChooseBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:background="@color/text_job"
+        android:fontFamily="@font/opensans_semibold"
+        android:paddingStart="@dimen/small_padding"
+        android:paddingEnd="@dimen/small_padding"
+        android:textColor="@color/item_name_color"
+        android:textSize="@dimen/size_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelChooseBackground"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

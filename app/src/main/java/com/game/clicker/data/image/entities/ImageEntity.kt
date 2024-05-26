@@ -10,17 +10,19 @@ data class ImageEntity(
     @PrimaryKey(autoGenerate = true)
     val imageId: Int,
     val typeImage: TypeImage,
+    val price: Int,
     val url: String
 ) {
 
     fun toImage(): Image {
-        return Image(imageId, typeImage, url)
+        return Image(imageId, typeImage, price , url)
     }
 
     companion object {
         fun toImageEntity(image: Image) = ImageEntity (
             image.imageId,
             image.typeImage,
+            image.price,
             image.url,
         )
     }

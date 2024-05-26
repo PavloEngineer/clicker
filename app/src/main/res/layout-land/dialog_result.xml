@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/profile_blue"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textHeaderResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/label_result"
+        android:textSize="@dimen/size_title_text"
+        android:textColor="@color/profile_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelScorePerGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_your_score"
+        android:textSize="@dimen/size_title_text"
+        android:textColor="@color/profile_title"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintEnd_toStartOf="@id/textHeaderResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHeaderResult" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textScorePerGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_outline"
+        android:padding="@dimen/small_padding"
+        android:labelFor="@id/labelScorePerGame"
+        android:textSize="@dimen/size_title_text"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/labelScorePerGame"
+        app:layout_constraintBottom_toBottomOf="@+id/labelScorePerGame"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainButtonStyle"
+        android:text="@string/label_menu"
+        android:padding="@dimen/normal_padding"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textScorePerGame"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_user" />
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.game.clicker.presentation.ui.fragment.user.menu.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_playModeFragment"
+            app:destination="@id/playModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playModeFragment"
+        android:name="com.game.clicker.presentation.ui.fragment.user.play_mode.PlayModeFragment"
+        android:label="PlayModeFragment" >
+        <argument
+            android:name="skinUrl"
+            app:argType="string" />
+        <argument
+            android:name="backgroundUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_playModeFragment_to_resultDialog"
+            app:destination="@id/resultDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/resultDialog"
+        android:name="com.game.clicker.presentation.ui.fragment.user.play_mode.dialog_result.ResultDialog"
+        android:label="ResultDialog" >
+        <action
+            android:id="@+id/action_resultDialog_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <argument
+            android:name="scoreDuringGame"
+            app:argType="integer" />
+    </dialog>
+</navigation>

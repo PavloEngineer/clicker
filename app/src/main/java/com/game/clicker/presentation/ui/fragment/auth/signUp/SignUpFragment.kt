@@ -7,6 +7,7 @@ import com.game.clicker.domain.models.User
 import com.game.clicker.presentation.ui.base.BaseFragment
 import com.game.clicker.presentation.util.addTextListener
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.navigateUp
 import com.game.clicker.R
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -41,10 +42,13 @@ class SignUpFragment: BaseFragment<FragmentRegisterBinding>(FragmentRegisterBind
                     )
 
                     viewModel.registerUser(user)
+                    findNavController().navigateUp()
                 }
             }
         }
     }
+
+
 
     private fun isAllFieldCorrect(): Boolean {
         with(binding) {

@@ -17,8 +17,6 @@
     <string name="label_fill">Fill out the profile</string>
     <string name="label_again_password">Again password</string>
     <string name="label_name">Full name</string>
-    <string name="label_phone">Phone number</string>
-    <string name="label_birth">Birth date</string>
     <string name="text_cancel">Cancel</string>
 
     <!-- navigation menu -->
@@ -29,16 +27,23 @@
     <string name="error_email">Wrong format</string>
     <string name="error_password">Unreliable password.Use upper and lower case, digits, sign</string>
     <string name="error_password_same">Passwords are different</string>
-    <string name="error_phone_number">Wrong format of number</string>
-    <string name="error_old_enough">Not old enough</string>
     <string name="error_date_format">Incorrect date format</string>
-    <string name="error_connect">Connect error</string>
-    <string name="error_unknown">Something went wrong</string>
-    <string name="error_server">A problem with server</string>
 
     <!-- Toast message -->
     <string name="message_successfully">Successfully</string>
     <string name="label_hotel">Hotel</string>
     <string name="text_close_bar">Close bar</string>
     <string name="text_app_name">GameClick</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_menu">Menu</string>
+    <string name="label_play">Play</string>
+    <string name="label_shop">Shop</string>
+    <string name="label_exit">Exit</string>
+    <string name="label_choose_skin">Choose skin:</string>
+    <string name="label_choose_background">Choose background:</string>
+    <string name="label_stop">Stop</string>
+    <string name="label_result">Result</string>
+    <string name="label_your_score">Your score:</string>
+    <string name="label_total_score">Total score:</string>
 </resources>

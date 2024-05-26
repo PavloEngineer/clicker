@@ -21,5 +21,8 @@ class UserRepositoryImpl @Inject constructor(
 
     override suspend fun getUser(email: String, password: String): User =
          userDao.getUser(email, password).toUser()
+
+    override suspend fun getUserById(userId: Int): User =
+        userDao.getUserById(userId).toUser()
 }
 
