@@ -28,13 +28,13 @@ class MenuFragment: BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::infla
     override fun onStart() {
         super.onStart()
         viewModel.storeOfSkins.flowWithLifecycle(viewLifecycleOwner.lifecycle)
-            .onEach { data ->
+            .onEach {
                 setupSkinsSpinner()
             }
             .launchIn(viewLifecycleOwner.lifecycleScope)
 
         viewModel.storeOfBackgrounds.flowWithLifecycle(viewLifecycleOwner.lifecycle)
-            .onEach { data ->
+            .onEach {
                 setupStoreOfBackgroundsSpinner()
             }
             .launchIn(viewLifecycleOwner.lifecycleScope)
@@ -43,14 +43,14 @@ class MenuFragment: BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::infla
     private fun setupSkinsSpinner() {
         val skins: List<String> = viewModel.storeOfSkins.value.map { "${it.image.imageId}" }
         val adapter = ArrayAdapter(requireContext(), R.layout.simple_spinner_item, skins)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
         binding.editTypeSkin.adapter = adapter
     }
 
     private fun setupStoreOfBackgroundsSpinner() {
         val background: List<String> = viewModel.storeOfBackgrounds.value.map { "${it.image.imageId}" }
         val adapter = ArrayAdapter(requireContext(), R.layout.simple_spinner_item, background)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
         binding.editChooseBackground.adapter = adapter
     }
 
@@ -78,7 +78,8 @@ class MenuFragment: BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::infla
 
     private fun setupShopButtonListener() {
         binding.buttonShop.setOnClickListener {
-            // Add your shop button logic here
+            val direction = MenuFragmentDirections.actionMenuFragmentToShopFragment()
+            findNavController().navigate(direction)
         }
     }
 

@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_menuFragment_to_playModeFragment"
             app:destination="@id/playModeFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
     </fragment>
     <fragment
         android:id="@+id/playModeFragment"
@@ -37,4 +40,12 @@
             android:name="scoreDuringGame"
             app:argType="integer" />
     </dialog>
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.game.clicker.presentation.ui.fragment.user.shop.ShopFragment"
+        android:label="ShopFragment" >
+        <action
+            android:id="@+id/action_shopFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
 </navigation>

@@ -34,7 +34,6 @@
     <string name="label_hotel">Hotel</string>
     <string name="text_close_bar">Close bar</string>
     <string name="text_app_name">GameClick</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_menu">Menu</string>
     <string name="label_play">Play</string>
@@ -46,4 +45,6 @@
     <string name="label_result">Result</string>
     <string name="label_your_score">Your score:</string>
     <string name="label_total_score">Total score:</string>
+    <string name="label_available_images">Available images</string>
+    <string name="label_price">Price:</string>
 </resources>

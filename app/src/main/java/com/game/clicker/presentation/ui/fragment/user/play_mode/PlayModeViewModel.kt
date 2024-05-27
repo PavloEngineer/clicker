@@ -28,11 +28,11 @@ class PlayModeViewModel @Inject constructor(
     private var _user: MutableStateFlow<User> = MutableStateFlow(User())
     val user: StateFlow<User> = _user
 
-    init{
+    init {
         getUser()
     }
 
-    fun getUser() {
+    private fun getUser() {
             viewModelScope.launch {
                 val userId = appSettings.getUserId()
                 userId?.run {

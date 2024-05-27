@@ -33,6 +33,7 @@
         <item name="android:fontFamily">@font/opensans_semibold</item>
         <item name="android:textColor">@color/grey_auth</item>
         <item name="android:textSize">@dimen/size_job_text</item>
+        <item name="android:paddingHorizontal">@dimen/small_padding</item>
         <item name="android:layout_marginTop">@dimen/normal_margin</item>
     </style>
 

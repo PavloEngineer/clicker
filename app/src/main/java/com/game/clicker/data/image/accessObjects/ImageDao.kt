@@ -13,5 +13,13 @@ interface ImageDao {
     suspend fun addImage(imageEntity: ImageEntity)
 
     @Query("SELECT * FROM image")
-    fun getAllImages(): Flow<List<ImageEntity>>
+     fun getAllImages(): Flow<List<ImageEntity>>
+
+    @Query("""
+        SELECT * FROM image 
+        WHERE imageId NOT IN (
+            SELECT imageId FROM store WHERE userId = :userId
+        )
+    """)
+    fun getImagesNotOwnedByUser(userId: Int): Flow<List<ImageEntity>>
 }

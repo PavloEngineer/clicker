@@ -9,7 +9,10 @@ import com.game.clicker.domain.repositories.StoreRepository
 import com.game.clicker.domain.repositories.UserRepository
 import com.game.clicker.domain.utils.TypeImage
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
@@ -20,25 +23,65 @@ class RegisterUserUseCase @Inject constructor(
     private val storeRepository: StoreRepository,
     private val imageRepository: ImageRepository
 ) {
+
     suspend operator fun invoke(user: User) {
         withContext(Dispatchers.IO) {
-            userRepository.addUser(user)
-
-            val skinImage = Image(typeImage =  TypeImage.SKIN, price = 0, url = R.drawable.skin_scratch_cat.toString())
-            val backgroundImage = Image(typeImage = TypeImage.BACKGROUND, price =  0, url =  R.drawable.protruding_squares.toString())
-
-            imageRepository.addImage(skinImage)
-            imageRepository.addImage(backgroundImage)
-
-            val currentDate = LocalDate.now()
-
-            val skinStoreEntity = Store(userId = userRepository.getUser(user.email, user.password).userId, imageId = skinImage.imageId + 1, dateOfBuying =  currentDate)
-            val backgroundStoreEntity = Store(userId = userRepository.getUser(user.email, user.password).userId, imageId = backgroundImage.imageId + 2, dateOfBuying = currentDate)
+            var isImagesListEmpty: Boolean
 
             runBlocking {
-                storeRepository.insertStore(skinStoreEntity)
-                storeRepository.insertStore(backgroundStoreEntity)
+                userRepository.addUser(user)
+                isImagesListEmpty = imageRepository.getAllImages().first().isEmpty()
             }
+
+            if (isImagesListEmpty) {
+                fillImages()
+            }
+
+            fillStore(user)
+        }
+    }
+
+    private suspend fun fillImages() {
+        val skinImage = Image(
+            typeImage = TypeImage.SKIN,
+            price = 0,
+            url = R.drawable.skin_scratch_cat.toString()
+        )
+        val backgroundImage = Image(
+            typeImage = TypeImage.BACKGROUND,
+            price = 0,
+            url = R.drawable.protruding_squares.toString()
+        )
+
+        val backgroundImageGreen = Image(
+            typeImage = TypeImage.BACKGROUND,
+            price = 100,
+            url = R.drawable.backround_tortoise_shell.toString()
+        )
+
+        runBlocking {
+            imageRepository.addImage(skinImage)
+            imageRepository.addImage(backgroundImage)
+            imageRepository.addImage(backgroundImageGreen)
+        }
+    }
+
+    private suspend fun fillStore(user: User) {
+        val currentDate = LocalDate.now()
+        val skinStoreEntity = Store(
+            userId = userRepository.getUser(user.email, user.password).userId,
+            imageId = 1,
+            dateOfBuying = currentDate
+        )
+        val backgroundStoreEntity = Store(
+            userId = userRepository.getUser(user.email, user.password).userId,
+            imageId = 2,
+            dateOfBuying = currentDate
+        )
+
+        runBlocking {
+            storeRepository.insertStore(skinStoreEntity)
+            storeRepository.insertStore(backgroundStoreEntity)
         }
     }
 }

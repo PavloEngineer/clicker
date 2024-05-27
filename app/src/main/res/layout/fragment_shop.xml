@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/profile_blue">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:backgroundTint="@color/color_accent"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelShopHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:text="@string/label_shop"
+        android:textSize="@dimen/size_title_text"
+        android:textColor="@color/profile_title"
+        app:layout_constraintTop_toTopOf="@id/buttonBack"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelScoreTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_your_score"
+        android:textSize="@dimen/size_title_text"
+        android:textColor="@color/profile_title"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelShopHeader" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textScoreTotalShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_outline"
+        android:padding="@dimen/small_padding"
+        android:labelFor="@id/labelScorePerGame"
+        android:textSize="@dimen/size_title_text"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/labelScoreTotal"
+        app:layout_constraintTop_toTopOf="@id/labelScoreTotal"
+        app:layout_constraintBottom_toBottomOf="@+id/labelScoreTotal"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelAvailableImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/HeaderStyle"
+        android:text="@string/label_available_images"
+        android:textSize="@dimen/size_title_text"
+        android:textColor="@color/profile_title"
+        app:layout_constraintTop_toBottomOf="@+id/textScoreTotalShop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/large_margin" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerImages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/labelAvailableImages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

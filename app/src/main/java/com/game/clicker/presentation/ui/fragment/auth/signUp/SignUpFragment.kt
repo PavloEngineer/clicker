@@ -48,8 +48,6 @@ class SignUpFragment: BaseFragment<FragmentRegisterBinding>(FragmentRegisterBind
         }
     }
 
-
-
     private fun isAllFieldCorrect(): Boolean {
         with(binding) {
             return viewModel.isEmailCorrect(editEmail.text.toString()) &&
