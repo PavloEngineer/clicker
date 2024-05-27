@@ -28,5 +28,4 @@
         <activity android:name=".presentation.ui.activities.MainActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
     </application>
-
 </manifest>

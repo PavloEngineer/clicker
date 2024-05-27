@@ -18,5 +18,10 @@ class ValidationUser {
             if (password == null) return false
             return pattern.matcher(password).matches()
         }
+
+        fun isPasswordsSame(password: String?, againPassword: String?): Boolean {
+            if (password == null || againPassword == null) return false
+            return password == againPassword
+        }
     }
 }

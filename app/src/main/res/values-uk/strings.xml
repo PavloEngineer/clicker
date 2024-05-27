@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">GameClicking</string>
+
+    <!-- authentication screen -->
+    <string name="label_welcome">Ласкаво просимо до гри</string>
+    <string name="label_bottom_title">Зареєструйся та починай грати!</string>
+    <string name="label_email">Пошта</string>
+    <string name="label_password">Пароль</string>
+    <string name="text_register">Зареєструватися</string>
+    <string name="text_terms">Тиснувши Увійти ви погоджуєтесь на наші умови</string>
+    <string name="text_question">Досі відстутній акаунт?</string>
+    <string name="text_signIn">Увійти</string>
+
+    <!-- register screen -->
+    <string name="label_fill">Заповни профіль</string>
+    <string name="label_again_password">Повтори пароль</string>
+    <string name="label_name">Повне ім\'я</string>
+    <string name="text_cancel">Закрити</string>
+
+    <!-- Errors -->
+    <string name="error_email">Невірний формат</string>
+    <string name="error_password">Ненадійний пароль. Використовуй різні регістри та символи</string>
+
+    <!-- Menu screen -->
+    <string name="label_menu">Меню</string>
+    <string name="label_play">Грати</string>
+    <string name="label_shop">Магазин</string>
+    <string name="label_exit">Вийти</string>
+    <string name="label_choose_skin">Вибрати персонажа:</string>
+    <string name="label_choose_background">Вибрати фон:</string>
+
+    <!-- Playing screen -->
+    <string name="label_stop">Стоп</string>
+    <string name="label_result">Результат</string>
+    <string name="label_your_score">Твій результат:</string>
+    <string name="label_total_score">Загальний результат:</string>
+    <string name="label_available_images">Доступні зображення</string>
+    <string name="label_price">Ціна:</string>
+</resources>

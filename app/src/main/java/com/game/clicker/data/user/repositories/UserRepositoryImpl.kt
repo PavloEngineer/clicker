@@ -4,8 +4,6 @@ import com.game.clicker.data.user.accessObjects.UserDao
 import com.game.clicker.data.user.entities.UserEntity
 import com.game.clicker.domain.models.User
 import com.game.clicker.domain.repositories.UserRepository
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(

@@ -11,13 +11,10 @@
     <color name="profile_blue">#242235</color>
     <color name="profile_title">#FAFAFA</color>
     <color name="text_job">#B2B2B3</color>
-    <color name="text_edit_button">#18181F</color>
     <color name="orange">#FB5E06</color>
     <color name="light">#FFFFFF</color>
     <color name="item_contact_color">#F9F9F9</color>
     <color name="item_name_color">#18181F</color>
-    <color name="item_job_color">#828282</color>
-    <color name="item_multiselect_contact">#E7E7E7</color>
     <color name="grey_auth">#BDBDBD</color>
     <color name="color_accent">#00000000</color>
 

@@ -1,139 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/profile_blue"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_blue">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/labelHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:theme="@style/HeaderStyle"
-            android:text="@string/label_fill"
-            android:textSize="@dimen/size_title_text"
-            android:textColor="@color/profile_title"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/large_margin" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="@string/label_fill"
+        android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_title_text"
+        android:theme="@style/HeaderStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/labelEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/LabelLightStyle"
-            android:text="@string/label_email"
-            android:layout_marginStart="@dimen/normal_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/labelHeader" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelEmail"
+        style="@style/LabelLightStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:text="@string/label_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelHeader" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editEmail"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            style="@style/InputFieldStyle"
-            android:autofillHints="emailAddress"
-            android:inputType="textEmailAddress"
-            android:labelFor="@id/labelEmail"
-            android:maxLength="30"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/labelEmail" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editEmail"
+        style="@style/InputFieldStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/labelEmail"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelEmail" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/labelPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/LabelLightStyle"
-            android:text="@string/label_password"
-            android:layout_marginStart="@dimen/normal_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editEmail" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelPassword"
+        style="@style/LabelLightStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:text="@string/label_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editEmail" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editPassword"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            style="@style/InputFieldStyle"
-            android:autofillHints="password"
-            android:inputType="textPassword"
-            android:labelFor="@id/labelPassword"
-            android:maxLength="30"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/labelPassword" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editPassword"
+        style="@style/InputFieldStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:inputType="textPassword"
+        android:labelFor="@id/labelPassword"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelPassword" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/labelAgainPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/LabelLightStyle"
-            android:text="@string/label_again_password"
-            android:layout_marginStart="@dimen/normal_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editPassword" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelAgainPassword"
+        style="@style/LabelLightStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:text="@string/label_again_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editPassword" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editAgainPassword"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            style="@style/InputFieldStyle"
-            android:autofillHints="password"
-            android:inputType="textPassword"
-            android:labelFor="@id/labelAgainPassword"
-            android:maxLength="30"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/labelAgainPassword" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editAgainPassword"
+        style="@style/InputFieldStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:inputType="textPassword"
+        android:labelFor="@id/labelAgainPassword"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelAgainPassword" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/labelFullName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/LabelLightStyle"
-            android:text="@string/label_name"
-            android:layout_marginStart="@dimen/normal_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editAgainPassword" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/labelFullName"
+        style="@style/LabelLightStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:text="@string/label_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editAgainPassword" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editFullName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            style="@style/InputFieldStyle"
-            android:inputType="text"
-            android:labelFor="@id/labelFullName"
-            android:maxLength="30"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/labelFullName" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editFullName"
+        style="@style/InputFieldStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:labelFor="@id/labelFullName"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelFullName" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_margin"
+        android:layout_marginVertical="@dimen/label_margin"
+        android:background="@drawable/btn_outline"
+        android:fontFamily="@font/opensans_semibold"
+        android:paddingVertical="@dimen/normal_padding"
+        android:text="@string/text_cancel"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_name_text"
+        app:layout_constraintBottom_toTopOf="@id/buttonRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonCancel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/normal_margin"
-            android:layout_marginVertical="@dimen/label_margin"
-            android:fontFamily="@font/opensans_semibold"
-            android:background="@drawable/btn_outline"
-            android:text="@string/text_cancel"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_name_text"
-            android:textAlignment="center"
-            android:paddingVertical="@dimen/normal_padding"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/buttonRegister" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonRegister"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            style="@style/MainButtonStyle"
-            android:text="@string/text_register"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRegister"
+        style="@style/MainButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

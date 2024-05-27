@@ -21,4 +21,6 @@ class SignUpViewModel @Inject constructor(
     fun isEmailCorrect(email: String?): Boolean = ValidationUser.isEmailCorrect(email)
 
     fun isPasswordCorrect(password: String?): Boolean = ValidationUser.isPasswordCorrect(password)
+
+    fun isPasswordsSame(password: String?, againPassword: String?): Boolean = ValidationUser.isPasswordsSame(password, againPassword)
 }

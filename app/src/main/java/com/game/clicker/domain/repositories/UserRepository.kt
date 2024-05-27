@@ -1,7 +1,6 @@
 package com.game.clicker.domain.repositories
 
 import com.game.clicker.domain.models.User
-import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {
 

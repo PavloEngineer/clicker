@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/profile_blue"
     tools:ignore="MissingDefaultResource">
 
@@ -11,11 +11,11 @@
         android:id="@+id/textHeaderResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/HeaderStyle"
         android:layout_marginTop="@dimen/small_margin"
         android:text="@string/label_result"
-        android:textSize="@dimen/size_title_text"
         android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_title_text"
+        android:theme="@style/HeaderStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,14 +24,14 @@
         android:id="@+id/labelScorePerGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_your_score"
-        android:textSize="@dimen/size_title_text"
-        android:textColor="@color/profile_title"
-        android:fontFamily="@font/opensans_semibold"
-        android:layout_marginTop="@dimen/large_margin"
         android:layout_marginStart="@dimen/small_margin"
-        app:layout_constraintHorizontal_bias="0.8"
+        android:layout_marginTop="@dimen/large_margin"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="@string/label_your_score"
+        android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_title_text"
         app:layout_constraintEnd_toStartOf="@id/textHeaderResult"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textHeaderResult" />
 
@@ -39,28 +39,28 @@
         android:id="@+id/textScorePerGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_outline"
-        android:padding="@dimen/small_padding"
-        android:labelFor="@id/labelScorePerGame"
-        android:textSize="@dimen/size_title_text"
-        android:fontFamily="@font/opensans_semibold"
         android:layout_marginTop="@dimen/small_margin"
+        android:background="@drawable/btn_outline"
+        android:fontFamily="@font/opensans_semibold"
+        android:labelFor="@id/labelScorePerGame"
+        android:padding="@dimen/small_padding"
+        android:textSize="@dimen/size_title_text"
+        app:layout_constraintBottom_toBottomOf="@+id/labelScorePerGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/labelScorePerGame"
-        app:layout_constraintBottom_toBottomOf="@+id/labelScorePerGame"/>
+        app:layout_constraintTop_toTopOf="@id/labelScorePerGame" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonMenu"
+        style="@style/MainButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/MainButtonStyle"
-        android:text="@string/label_menu"
-        android:padding="@dimen/normal_padding"
-        app:layout_constraintVertical_bias="0.3"
         android:layout_marginHorizontal="@dimen/large_margin"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/label_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textScorePerGame"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintVertical_bias="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

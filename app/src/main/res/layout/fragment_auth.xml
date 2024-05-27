@@ -9,11 +9,11 @@
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/HeaderStyle"
         android:layout_marginTop="@dimen/margin_top_title"
         android:text="@string/label_welcome"
-        android:textSize="@dimen/size_title_text"
         android:textColor="@color/profile_title"
+        android:textSize="@dimen/size_title_text"
+        android:theme="@style/HeaderStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,19 +33,19 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/labelEmail"
+        style="@style/LabelLightStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/LabelLightStyle"
-        android:text="@string/label_email"
         android:layout_marginStart="@dimen/normal_margin"
+        android:text="@string/label_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/labelBottomTitle" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editEmail"
+        style="@style/InputFieldStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/InputFieldStyle"
         android:autofillHints="emailAddress"
         android:inputType="textEmailAddress"
         android:labelFor="@id/labelEmail"
@@ -56,19 +56,19 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/labelPassword"
+        style="@style/LabelLightStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/LabelLightStyle"
-        android:text="@string/label_password"
         android:layout_marginStart="@dimen/normal_margin"
+        android:text="@string/label_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editEmail" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editPassword"
+        style="@style/InputFieldStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/InputFieldStyle"
         android:autofillHints="emailAddress"
         android:inputType="textPassword"
         android:labelFor="@id/labelPassword"
@@ -79,14 +79,14 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signInButton"
+        style="@style/MainButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/MainButtonStyle"
         android:text="@string/text_signIn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.2"
         app:strokeWidth="@dimen/stroke_width" />
 
@@ -115,8 +115,8 @@
         android:text="@string/text_question"
         android:textColor="@color/text_job"
         android:textSize="@dimen/size_job_text"
-        app:layout_constraintEnd_toStartOf="@id/buttonRegisterUser"
         app:layout_constraintBottom_toBottomOf="@id/buttonRegisterUser"
+        app:layout_constraintEnd_toStartOf="@id/buttonRegisterUser"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/labelTerms" />
@@ -127,10 +127,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginTop="@dimen/small_margin"
-        android:padding="@dimen/small_padding"
-        android:fontFamily="@font/opensans_semibold"
-        android:text="@string/text_register"
         android:background="@drawable/btn_outline"
+        android:fontFamily="@font/opensans_semibold"
+        android:padding="@dimen/small_padding"
+        android:text="@string/text_register"
         android:textColor="@color/light"
         android:textSize="@dimen/size_job_text"
         app:layout_constraintEnd_toEndOf="parent"

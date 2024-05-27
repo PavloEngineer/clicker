@@ -18,7 +18,6 @@ class SharedPreferencesAppSettings @Inject constructor(
 
     private val sharedPreferences = appContext.getSharedPreferences(NAME_PREFERENCES, Context.MODE_PRIVATE)
 
-
     override fun setUserId(userId: Int?) {
         val editor = sharedPreferences.edit()
         if (userId == null) {

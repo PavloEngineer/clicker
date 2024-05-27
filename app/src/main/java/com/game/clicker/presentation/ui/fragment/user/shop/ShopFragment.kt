@@ -1,6 +1,5 @@
 package com.game.clicker.presentation.ui.fragment.user.shop
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -8,7 +7,6 @@ import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.game.clicker.R
 import com.game.clicker.databinding.FragmentShopBinding
 import com.game.clicker.domain.models.Image
 import com.game.clicker.presentation.ui.base.BaseFragment

@@ -27,12 +27,19 @@ class MenuFragment: BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::infla
 
     override fun onStart() {
         super.onStart()
+        setObserveSkins()
+        setObserveBackground()
+    }
+
+    private fun setObserveSkins() {
         viewModel.storeOfSkins.flowWithLifecycle(viewLifecycleOwner.lifecycle)
             .onEach {
                 setupSkinsSpinner()
             }
             .launchIn(viewLifecycleOwner.lifecycleScope)
+    }
 
+    private fun setObserveBackground() {
         viewModel.storeOfBackgrounds.flowWithLifecycle(viewLifecycleOwner.lifecycle)
             .onEach {
                 setupStoreOfBackgroundsSpinner()

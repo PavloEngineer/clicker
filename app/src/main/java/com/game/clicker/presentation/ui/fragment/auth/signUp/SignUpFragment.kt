@@ -7,7 +7,6 @@ import com.game.clicker.domain.models.User
 import com.game.clicker.presentation.ui.base.BaseFragment
 import com.game.clicker.presentation.util.addTextListener
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.navigateUp
 import com.game.clicker.R
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -52,7 +51,8 @@ class SignUpFragment: BaseFragment<FragmentRegisterBinding>(FragmentRegisterBind
         with(binding) {
             return viewModel.isEmailCorrect(editEmail.text.toString()) &&
                     viewModel.isPasswordCorrect(editPassword.text.toString()) &&
-                    (editFullName.text?.isNotEmpty() ?: "") as Boolean
+                    (editFullName.text?.isNotEmpty() ?: "") as Boolean &&
+                    viewModel.isPasswordsSame(editPassword.text.toString(), editAgainPassword.text.toString())
         }
     }
 }

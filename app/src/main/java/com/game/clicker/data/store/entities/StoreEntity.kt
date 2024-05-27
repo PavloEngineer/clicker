@@ -4,12 +4,9 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import androidx.room.Relation
 import com.game.clicker.data.image.entities.ImageEntity
 import com.game.clicker.data.user.entities.UserEntity
-import com.game.clicker.domain.models.Image
 import com.game.clicker.domain.models.Store
-import com.game.clicker.domain.models.StoreWithDetails
 import java.time.LocalDate
 
 @Entity(

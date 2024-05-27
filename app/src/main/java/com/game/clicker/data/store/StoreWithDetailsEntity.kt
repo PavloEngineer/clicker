@@ -5,7 +5,6 @@ import androidx.room.Relation
 import com.game.clicker.data.image.entities.ImageEntity
 import com.game.clicker.data.store.entities.StoreEntity
 import com.game.clicker.data.user.entities.UserEntity
-import com.game.clicker.domain.models.Image
 import com.game.clicker.domain.models.StoreWithDetails
 
 data class StoreWithDetailsEntity(

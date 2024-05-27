@@ -16,10 +16,8 @@ class ImageRepositoryImpl @Inject constructor(
         imageDao.addImage(ImageEntity.toImageEntity(image))
 
     override suspend fun getAllImages(): Flow<List<Image>> =
-         imageDao.getAllImages().map { list -> list.map { it.toImage() }}
+        imageDao.getAllImages().map { list -> list.map { it.toImage() } }
 
     override suspend fun getImagesNotOwnedByUser(userId: Int): Flow<List<Image>> =
         imageDao.getImagesNotOwnedByUser(userId).map { list -> list.map { it.toImage() } }
-
-
 }

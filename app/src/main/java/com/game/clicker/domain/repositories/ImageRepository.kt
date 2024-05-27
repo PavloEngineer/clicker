@@ -1,6 +1,5 @@
 package com.game.clicker.domain.repositories
 
-import com.game.clicker.data.image.entities.ImageEntity
 import com.game.clicker.domain.models.Image
 import kotlinx.coroutines.flow.Flow
 

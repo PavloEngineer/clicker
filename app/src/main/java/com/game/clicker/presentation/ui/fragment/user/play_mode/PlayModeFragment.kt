@@ -2,7 +2,6 @@ package com.game.clicker.presentation.ui.fragment.user.play_mode
 
 
 import android.annotation.SuppressLint
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels

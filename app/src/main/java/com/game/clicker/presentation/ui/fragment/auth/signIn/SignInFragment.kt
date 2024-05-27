@@ -1,7 +1,6 @@
 package com.game.clicker.presentation.ui.fragment.auth.signIn
 
 import android.content.Intent
-import android.provider.SyncStateContract
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.game.clicker.R
